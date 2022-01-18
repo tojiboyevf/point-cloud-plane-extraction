@@ -1,12 +1,10 @@
 # Instruction
 ## Options of building the docker image of repo:
 
-1) You can build docker image using current `Dockerfile` in this directory. But before running dockerfile you have to change the location of the some folders and files. The script `runbeforedocker.sh` does everything for you. Then build docker image:
+1) You can build docker image using current `Dockerfile` in this directory. But before running dockerfile you have to change the location of the some folders and files. The script `runbeforedocker.sh` does everything for you. Then build the docker image:
 ```
 docker build -t cpf_segmentation:1.0 .
 ```
-
-
 
 Then finally after creating docker image run following command:
 
