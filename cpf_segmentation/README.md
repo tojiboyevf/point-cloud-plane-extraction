@@ -6,7 +6,7 @@
 docker build -t cpf_segmentation:1.0 .
 ```
 
-2) Or you can run ready docker image `tojiboyevf/cpf_segmentation:1.0`
+
 
 Then finally after creating docker image run following command:
 
@@ -16,7 +16,7 @@ Here `src=/pathOfInputFolder` means the path of dataset that you are going to te
 ```
 sudo docker run --rm -ti --privileged --net=host --ipc=host    -e DISPLAY=$DISPLAY    -v /tmp/.X11-unix,/tmp/.X11-unix  --mount src=/home/adminlinux/cpf_segmentation/input,target=/app/build/input,type=bind --mount src=/home/adminlinux/cpf_segmentation/output,target=/app/build/output,type=bind cpf_segmentation:1.0
 ```
-
+2) Or you can run ready docker image `tojiboyevf/cpf_segmentation:1.0`
 
 ## Testing repo:
 
