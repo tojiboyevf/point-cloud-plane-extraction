@@ -21,8 +21,7 @@ sudo docker run --rm -ti --privileged --net=host --ipc=host    -e DISPLAY=$DISPL
 ## Testing repo:
 
 If you are using docker image by default the path of working directory will be in `build` folder.
-
-To test the library, use following general command:
+You can use `.ply` or `.pcd` formats as a dataset format. To test the library, use following general command:
 
 ```
 pathOfBuildDirectory/segmentation_test pathOfDataset/data.pcd -o outputFolderPath/nameOfOutputfile
