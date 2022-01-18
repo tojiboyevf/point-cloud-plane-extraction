@@ -20,17 +20,18 @@ sudo docker run --rm -ti --privileged --net=host --ipc=host    -e DISPLAY=$DISPL
 
 ## Testing repo:
 
-If you are using docker image by default path of working directory is in `build` folder.
+If you are using docker image by default the path of working directory will be in `build` folder.
 
 To test the library, use following general command:
 
 ```
 pathOfBuildDirectory/segmentation_test pathOfDataset/data.pcd -o outputFolderPath/nameOfOutputfile
 ```
-`-o` is response to save the result to indicated path after it. You can omit it if you are not going to save the result.  For example, in docker image you can run:
+For example, in docker image you can run:
 ```
 ./segmentation_test input/0000.pcd -o output/0000_result
 ```
+`-o` is response to save the result to indicated path after it. You can omit it if you are not going to save the result.  
 The name of output file starts with `0000_result` and you can find it in `output` folder. Be sure you pasted dataset in `input` folder.
 There is an additonal parameter `-novis`. If you use it then it doesn't visualize the result. For example:
 ```
