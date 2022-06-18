@@ -1,0 +1,27 @@
+cmake_minimum_required(VERSION 2.8)
+
+project(CAPE)
+
+find_package(OpenCV REQUIRED PATHS "/home/tojiboev/build" NO_DEFAULT_PATH)
+find_package(Eigen3 REQUIRED)
+
+
+set (CMAKE_CXX_FLAGS "-O2")
+
+set(CMAKE_BUILD_TYPE Release)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake-modules)
+
+set(WITH_GTK_2_X "Use GTK version 2")
+
+include_directories(${EIGEN3_INCLUDE_DIR})
+
+add_executable(cape_offline
+	run_cape_offline.cpp
+	CAPE.cpp
+	PlaneSeg.cpp
+	CylinderSeg.cpp
+	Histogram.cpp)
+
+target_link_libraries(cape_offline ${OpenCV_LIBS} ${Eigen_LIBRARIES})
+
+
